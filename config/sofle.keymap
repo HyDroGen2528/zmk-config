@@ -117,13 +117,15 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans    &trans           &trans             &trans     &trans  &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp HOME  &trans           &kp UP             &trans     &trans  &trans
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp HOME  &trans           &kp UP             &trans     &trans  &kp DEL
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp END   &kp LEFT         &kp DOWN           &kp RIGHT  &trans  &trans
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &marco_1  &marco_2         &marco_3           &marco_4   &trans  &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         adjust_layer {
