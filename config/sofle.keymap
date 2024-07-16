@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define BASE 0
@@ -59,7 +60,7 @@
         bluetooth: bluetooth {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp K>;
+            bindings = <&kt LEFT_WIN &kp K>;
             label = "BLUETOOTH";
         };
     };
